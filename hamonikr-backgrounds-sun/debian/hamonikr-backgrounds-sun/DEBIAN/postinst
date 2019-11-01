@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -Tfs /usr/share/backgrounds/hamonikr-sun/hamonikr-01.jpg /usr/share/backgrounds/linuxmint/default_background.jpg
+gsettings set org.cinnamon.desktop.background picture-uri 'file:///usr/share/backgrounds/hamonikr-sun/hamonikr-01.jpg'
+#service lightdm restart

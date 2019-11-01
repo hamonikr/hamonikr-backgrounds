@@ -1,0 +1,3 @@
+#!/bin/bash
+ln -Tfs /usr/share/backgrounds/hamonikr-me/HamoniKR-ME_3840x2400_bg1.jpg /usr/share/backgrounds/linuxmint/default_background.jpg
+gsettings set org.cinnamon.desktop.background picture-uri 'file:///usr/share/backgrounds/hamonikr-me/HamoniKR-ME_3840x2400_bg1.jpg'
