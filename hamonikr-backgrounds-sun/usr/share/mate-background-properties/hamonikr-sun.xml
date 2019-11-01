@@ -1,0 +1,69 @@
+<?xml version="1.0"?> 
+<!DOCTYPE wallpapers SYSTEM "mate-wp-list.dtd"> 
+<wallpapers> 
+
+<wallpaper deleted="false"> 
+ <name>HamoniKR 01</name> 
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-01.jpg</filename> 
+ <options>zoom</options> 
+ <shade_type>solid</shade_type> 
+ <pcolor>#000000</pcolor> 
+ <scolor>#000000</scolor> 
+ <artist>INVESUME</artist> 
+</wallpaper> 
+<wallpaper deleted="false">
+ <name>HamoniKR 02</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-02.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+<wallpaper deleted="false">
+ <name>HamoniKR 03</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-03.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+<wallpaper deleted="false">
+ <name>HamoniKR 04</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-04.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+<wallpaper deleted="false">
+ <name>HamoniKR 05</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-05.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+<wallpaper deleted="false">
+ <name>HamoniKR 06</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-06.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+<wallpaper deleted="false">
+ <name>HamoniKR 07</name>
+ <filename>/usr/share/backgrounds/hamonikr-sun/hamonikr-07.jpg</filename>
+ <options>zoom</options>
+ <shade_type>solid</shade_type>
+ <pcolor>#000000</pcolor>
+ <scolor>#000000</scolor>
+ <artist>INVESUME</artist>
+</wallpaper>
+
+</wallpapers> 
