@@ -1,8 +1,8 @@
 Package: hamonikr-backgrounds-sun
-Version: 0.0.10-1
+Version: 0.0.12-1
 Architecture: all
 Maintainer: HamoniKR <pkg@hamonikr.org>
-Installed-Size: 1892
+Installed-Size: 3102
 Section: admin
 Priority: optional
 Homepage: https://hamonikr.org
