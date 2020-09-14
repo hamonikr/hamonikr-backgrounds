@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hamonikr-backgrounds
+Source: https://github.com/hamonikr/hamonikr-backgrounds
+
+Files:     *
+Copyright: 2020 Kevin Kim <root@hamonikr.org>
+License:   GPL version 3,
+ see `/usr/share/common-licenses/GPL-3'.
