@@ -1,3 +1,21 @@
+hamonikr-backgrounds (1.2.4) jin; urgency=low
+
+  * fixed bug in postrm
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 26 Oct 2020 09:50:11 +0900
+
+hamonikr-backgrounds (1.2.3) jin; urgency=low
+
+  * add Korea wallpapers
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 26 Oct 2020 09:42:05 +0900
+
+hamonikr-backgrounds (1.2.2) focal; urgency=low
+
+  * add slick-greeter conf in /etc
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 19 Oct 2020 19:28:50 +0900
+
 hamonikr-backgrounds (1.2.1) focal; urgency=low
 
   * update lightdm-gtk-greeter setting also
