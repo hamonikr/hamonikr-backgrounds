@@ -18,24 +18,27 @@ desktop=${desktop,,}
 
 case $DIST in
     HamoniKR)
-        echo "Process environment setting for HamoniKR OS..."
+        # x 사용중일 때만 적용
+        xcheck=`tty | cut -d '/' -f3`
+        if [ $xcheck == "pts" ]; then
+          echo "Process environment setting for HamoniKR OS..."
 
-        # Get the Real Username
-        RUID=$(who | awk 'FNR == 1 {print $1}')
+          # Get the Real Username
+          RUID=$(who | awk 'FNR == 1 {print $1}')
 
-        # Translate Real Username to Real User ID
-        RUSER_UID=$(id -u ${RUID})
+          # Translate Real Username to Real User ID
+          RUSER_UID=$(id -u ${RUID})
 
-        # Set gsettings for the Real User
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri 'file:////usr/share/backgrounds/linuxmint/default_background.jpg'
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background 'file:////usr/share/backgrounds/linuxmint/default_background.jpg'		
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/linuxmint/default_background.jpg"
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/linuxmint/default_background.jpg"                        
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/linuxmint/default_background.jpg'
-        
-        # change lightdm setting
-        sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
-        
+          # Set gsettings for the Real User
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri 'file:////usr/share/backgrounds/linuxmint/default_background.jpg'
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background 'file:////usr/share/backgrounds/linuxmint/default_background.jpg'		
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/linuxmint/default_background.jpg"
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/linuxmint/default_background.jpg"                        
+          sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/linuxmint/default_background.jpg'
+          
+          # change lightdm setting
+          sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
+        fi            
     ;;
     *)
     ;;
