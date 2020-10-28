@@ -1,3 +1,9 @@
+hamonikr-backgrounds (1.2.6) jin; urgency=low
+
+  * refresh background cache
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 28 Oct 2020 13:33:54 +0900
+
 hamonikr-backgrounds (1.2.5) jin; urgency=low
 
   * update new wallpaper images
