@@ -15,6 +15,11 @@ then
 else
   desktop=$XDG_CURRENT_DESKTOP
 fi
+
+xcheck=`tty | cut -d '/' -f3`
+if [ $xcheck != "pts" ]; then
+    echo "Current Mode is CLI : This Program must be run under GUI"
+fi
 # convert to lower case
 desktop=${desktop,,}
 
