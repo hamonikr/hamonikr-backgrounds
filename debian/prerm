@@ -37,7 +37,9 @@ case $DIST in
           sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/linuxmint/default_background.jpg'
           
           # change lightdm setting
-          sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
+          if [ -f "/etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf" ] ; then
+            sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
+          fi
         fi            
     ;;
     *)
