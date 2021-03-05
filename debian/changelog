@@ -1,3 +1,10 @@
+hamonikr-backgrounds (2.0.0) stable; urgency=low
+
+  * update image resources 
+  * Add debian/links
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 11:24:20 +0900
+
 hamonikr-backgrounds (1.2.8) jin; urgency=low
 
   * change background path in hamonikr.xml
