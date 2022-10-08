@@ -1,32 +1,13 @@
 #!/bin/bash
-if [ -f /etc/lsb-release ]; then
-    . /etc/lsb-release
-    DIST=$DISTRIB_ID
-    DIST_VER=$DISTRIB_RELEASE
-else
-    DIST="Unknown"
-    DIST_VER="Unknown"
-fi
 
-if [ "$XDG_CURRENT_DESKTOP" = "" ]
-then
-  desktop=$(echo "$XDG_DATA_DIRS" | sed 's/.*\(xfce\|kde\|gnome\).*/\1/')
-else
-  desktop=$XDG_CURRENT_DESKTOP
-fi
-desktop=${desktop,,}
+case "$1" in
+    remove|upgrade|deconfigure)
 
-case $DIST in
-    HamoniKR)
-        # x 사용중일 때만 적용
+      if [ -f "/etc/hamonikr/info" ] ; then
+
         xcheck=`tty | cut -d '/' -f3`
         if [ $xcheck == "pts" ]; then
-          echo "Process environment setting for HamoniKR OS..."
-
-          # Get the Real Username
           RUID=$(who | awk 'FNR == 1 {print $1}')
-
-          # Translate Real Username to Real User ID
           RUSER_UID=$(id -u ${RUID})
 
           # Set gsettings for the Real User
@@ -35,19 +16,21 @@ case $DIST in
           sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/linuxmint/default_background.jpg"
           sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/linuxmint/default_background.jpg"                        
           sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/linuxmint/default_background.jpg'
-          
-          # change lightdm setting
-          if [ -f "/etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf" ] ; then
-            sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
-          fi
-        fi            
+        fi
+
+        # change lightdm setting
+        if [ -f "/etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf" ] ; then
+          sed -i 's|background=/usr/share/backgrounds/hamonikr/default_background.jpg|background=/usr/share/backgrounds/linuxmint/default_background.jpg|g' \
+          /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
+        fi
+
+      fi
+
+    ;;
+    failed-upgrade)
     ;;
     *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
     ;;
 esac
-
-if which update-icon-caches >/dev/null 2>&1 ; then
-	update-icon-caches /usr/share/icons
-fi
-#DEBHELPER#
-exit 0

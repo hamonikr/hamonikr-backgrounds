@@ -3,7 +3,7 @@
 Image resources for HamoniKR background
 
 
-# Install (HamoniKR-ME, HamoniKR-3.0), HamoniKR-JIN)
+# Install (HamoniKR-ME, HamoniKR-3.0), HamoniKR-JIN, HamoniKR-Public)
 ```
 sudo apt install hamonikr-backgrounds
 ```

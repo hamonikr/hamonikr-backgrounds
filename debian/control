@@ -1,7 +1,7 @@
 Source: hamonikr-backgrounds
 Section: gnome
 Priority: optional
-Maintainer: Kevin Kim <chaeya@gmail.com>
+Maintainer: HamoniKR <pkg@hamonikr.org>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 4.1.4
 Homepage: https://hamonikr.org
@@ -9,6 +9,6 @@ Homepage: https://hamonikr.org
 Package: hamonikr-backgrounds
 Architecture: all
 Depends:
-Replaces: slick-greeter 
+Replaces: slick-greeter, cinnamon-common
 Description: HamoniKR background resources.
  하모니카 사용자를 위한 배경화면입니다.

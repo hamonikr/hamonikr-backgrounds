@@ -2,84 +2,61 @@
 
 update_background (){
     # Update the default BG date (to force a DE bg refresh on upgrade)
-    if [ -e /usr/share/backgrounds/hamonikr/default_background.jpg ]
-    then
+    if [ -e /usr/share/backgrounds/hamonikr/default_background.jpg ] ; then
         touch /usr/share/backgrounds/hamonikr/default_background.jpg
         touch /usr/share/cinnamon-background-properties/hamonikr.xml
-        echo "Updated timestamp for default background"
     fi
 }
 
-if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] || [ "$1" = "triggered" ] ; then
-    update_background
-    glib-compile-schemas /usr/share/glib-2.0/schemas
+case "$1" in
+    configure|upgrade|update|reconfigure|triggered)
     
-	if which update-icon-caches >/dev/null 2>&1 ; then
-		update-icon-caches /usr/share/icons
-	fi
-fi
-
-### Getting OS Information
-if [ -f /etc/lsb-release ]; then
-    . /etc/lsb-release
-    DIST=$DISTRIB_ID
-    DIST_VER=$DISTRIB_RELEASE
-else
-    DIST="Unknown"
-    DIST_VER="Unknown"
-fi
-
-if [ "$XDG_CURRENT_DESKTOP" = "" ]
-then
-  desktop=$(echo "$XDG_DATA_DIRS" | sed 's/.*\(xfce\|kde\|gnome\).*/\1/')
-else
-  desktop=$XDG_CURRENT_DESKTOP
-fi
-
-xcheck=`tty | cut -d '/' -f3`
-if [ $xcheck != "pts" ]; then
-    echo "Current Mode is CLI : This Program must be run under GUI"
-fi
-# convert to lower case
-desktop=${desktop,,}
-
-case $DIST in
-    HamoniKR)
-        echo "Process environment setting for HamoniKR OS..."
-
-        # Get the Real Username
-        RUID=$(who | awk 'FNR == 1 {print $1}')
-
-        # Translate Real Username to Real User ID
-        RUSER_UID=$(id -u ${RUID})
-
-        # Set gsettings for the Real User
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
-        sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+        update_background
+        glib-compile-schemas /usr/share/glib-2.0/schemas
         
-        # change lightdm setting
-        if [ -f "/etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf" ] ; then
-            sed -i 's|background=/usr/share/backgrounds/linuxmint/default_background.jpg|background=/usr/share/backgrounds/hamonikr/default_background.jpg|g' /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
-        fi        
+        if which update-icon-caches >/dev/null 2>&1 ; then
+            update-icon-caches /usr/share/icons
+        fi
 
-        if [ -f "/etc/lightdm/slick-greeter.conf" ] ; then
-            sed -i 's|background=/usr/share/backgrounds/linuxmint/default_background.jpg|background=/usr/share/backgrounds/hamonikr/default_background.jpg|g' /etc/lightdm/slick-greeter.conf
-        fi        
+        if [ -f "/etc/hamonikr/info" ] ; then
+            echo "Update HamoniKR OS Wallpaper Setting..."
+
+            xcheck=`tty | cut -d '/' -f3`
+            if [ $xcheck == "pts" ]; then
+
+                RUID=$(who | awk 'FNR == 1 {print $1}')
+                RUSER_UID=$(id -u ${RUID})
+
+                # Set gsettings for the Real User
+                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
+                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+            
+            fi
+
+            # change lightdm setting
+            if [ -f "/etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf" ] ; then
+                sed -i 's|background=/usr/share/backgrounds/linuxmint/default_background.jpg|background=/usr/share/backgrounds/hamonikr/default_background.jpg|g' \
+                /etc/lightdm/lightdm-gtk-greeter.conf.d/99_linuxmint.conf
+            fi        
+
+            if [ -f "/etc/lightdm/slick-greeter.conf" ] ; then
+                sed -i 's|background=/usr/share/backgrounds/linuxmint/default_background.jpg|background=/usr/share/backgrounds/hamonikr/default_background.jpg|g' \
+                /etc/lightdm/slick-greeter.conf
+            fi
+          
+        fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
 
     ;;
+    
     *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
     ;;
 esac
 
-echo "
-If you have any questions, please feel free to visit the address below.
-
-https://hamonikr.org
-"
-sleep 2
-
-
-#DEBHELPER#
 exit 0
