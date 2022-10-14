@@ -1,3 +1,10 @@
+hamonikr-backgrounds (3.1.1) taebaek; urgency=low
+
+  * Fix slick-greeter.conf
+   - Create if not found.
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 14 Oct 2022 17:38:52 +0900
+
 hamonikr-backgrounds (3.1.0) taebaek; urgency=low
 
   [Kevin Kim]
