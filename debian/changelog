@@ -1,3 +1,10 @@
+hamonikr-backgrounds (3.1.2) taebaek; urgency=low
+
+  [Kevin Kim]
+  * Add new background
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 23 Oct 2022 15:49:20 +0900
+
 hamonikr-backgrounds (3.1.1) taebaek; urgency=low
 
   * Fix slick-greeter.conf

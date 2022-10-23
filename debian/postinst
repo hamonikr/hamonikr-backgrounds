@@ -27,11 +27,13 @@ case "$1" in
                 RUID=$(who | awk 'FNR == 1 {print $1}')
                 RUSER_UID=$(id -u ${RUID})
 
-                # Set gsettings for the Real User
-                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
-                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
-                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
-                sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+                if [ ! -z "$RUID" ] ; then
+                    # Set gsettings for the Real User
+                    sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.cinnamon.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+                    sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.gnome.desktop.background picture-uri "file:////usr/share/backgrounds/hamonikr/default_background.jpg"
+                    sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set org.mate.background picture-filename "file:////usr/share/backgrounds/hamonikr/default_background.jpg"                
+                    sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" gsettings set x.dm.slick-greeter background '/usr/share/backgrounds/hamonikr/default_background.jpg'
+                fi
             
             fi
 
