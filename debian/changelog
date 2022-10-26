@@ -1,3 +1,11 @@
+hamonikr-backgrounds (3.1.3) taebaek; urgency=low
+
+  [Kevin Kim]
+  * Add new background
+   - HamoniKR 6.0 LTS taebaek version background
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 27 Oct 2022 01:12:33 +0900
+
 hamonikr-backgrounds (3.1.2) taebaek; urgency=low
 
   [Kevin Kim]
