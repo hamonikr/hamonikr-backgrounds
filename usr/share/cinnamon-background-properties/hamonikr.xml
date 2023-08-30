@@ -52,4 +52,44 @@
     <artist>HamoniKR Team</artist>
 </wallpaper>
 
+<wallpaper deleted="false">
+    <name>HamoniKR</name>
+    <filename>/usr/share/backgrounds/hamonikr/bg6.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <artist>HamoniKR Team</artist>
+</wallpaper>
+
+<wallpaper deleted="false">
+    <name>HamoniKR</name>
+    <filename>/usr/share/backgrounds/hamonikr/bg7.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <artist>HamoniKR Team</artist>
+</wallpaper>
+
+<wallpaper deleted="false">
+    <name>HamoniKR</name>
+    <filename>/usr/share/backgrounds/hamonikr/bg8.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <artist>HamoniKR Team</artist>
+</wallpaper>
+
+<wallpaper deleted="false">
+    <name>HamoniKR</name>
+    <filename>/usr/share/backgrounds/hamonikr/default_background.jpg</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <artist>HamoniKR Team</artist>
+</wallpaper>
+
 </wallpapers> 
