@@ -1,3 +1,11 @@
+hamonikr-backgrounds (3.3.1) stable; urgency=low
+
+  [Kevin Kim]
+  * Add wallpaper xml for gnome
+  * Add depandancy slick-greeter
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 01 Sep 2023 12:40:11 +0900
+
 hamonikr-backgrounds (3.3.0) stable; urgency=low
 
   [Kevin Kim]

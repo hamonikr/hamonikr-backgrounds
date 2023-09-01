@@ -8,7 +8,8 @@ Homepage: https://hamonikr.org
 
 Package: hamonikr-backgrounds
 Architecture: all
-Depends:
+Depends: slick-greeter
+Recommends:
 Replaces: slick-greeter, cinnamon-common
 Description: HamoniKR background resources.
  하모니카 사용자를 위한 배경화면입니다.
