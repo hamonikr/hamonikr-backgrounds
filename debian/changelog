@@ -1,3 +1,11 @@
+hamonikr-backgrounds (3.3.3) stable; urgency=low
+
+  [Kevin Kim]
+  * Update default wallpaper
+   - bg11.jpg
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 20 Oct 2023 13:38:49 +0900
+
 hamonikr-backgrounds (3.3.2) stable; urgency=low
 
   [Kevin Kim]
