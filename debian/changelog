@@ -1,3 +1,10 @@
+hamonikr-backgrounds (3.3.4) stable; urgency=low
+
+  [Kevin Kim]
+  * Removed slick-greeter dependency
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 29 Oct 2023 01:40:59 +0900
+
 hamonikr-backgrounds (3.3.3) stable; urgency=low
 
   [Kevin Kim]

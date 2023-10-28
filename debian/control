@@ -8,7 +8,7 @@ Homepage: https://hamonikr.org
 
 Package: hamonikr-backgrounds
 Architecture: all
-Depends: slick-greeter
+Depends: 
 Recommends:
 Replaces: slick-greeter, cinnamon-common
 Description: HamoniKR background resources.
