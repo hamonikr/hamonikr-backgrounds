@@ -1,3 +1,11 @@
+hamonikr-backgrounds (3.4.0+h1) stable; urgency=low
+
+  [Kevin Kim]
+  * Release for bookworm arm64
+   - No change
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 12 Jul 2024 01:55:04 +0900
+
 hamonikr-backgrounds (3.4.0) stable; urgency=low
 
   [Kevin Kim]
