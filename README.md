@@ -1,3 +1,6 @@
+[![Build Status](https://github.com/hamonikr/hamonikr-backgrounds/actions/workflows/ci.yml/badge.svg)](https://github.com/hamonikr/hamonikr-backgrounds/actions/workflows/ci.yml)
+
+
 # HamoniKR OS Wallpaper
 
 ## For HamoniKR
