@@ -1,3 +1,17 @@
+hamonikr-backgrounds (3.4.3) paektu; urgency=medium
+
+  * Release for ubuntu 24.04
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 04 Aug 2024 01:19:27 +0900
+
+hamonikr-backgrounds (3.4.2) paektu; urgency=medium
+
+  [Kevin Kim]
+  * Fixed postinst
+  * Update images
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 03 Aug 2024 23:31:52 +0900
+
 hamonikr-backgrounds (3.4.1) paektu; urgency=medium
 
   [Kevin Kim]

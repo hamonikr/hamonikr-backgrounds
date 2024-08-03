@@ -4,7 +4,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg1.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg01.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -14,7 +14,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg2.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg02.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -24,7 +24,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg3.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg03.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -34,7 +34,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg4.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg04.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -44,7 +44,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg5.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg05.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -54,7 +54,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg6.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg06.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -64,7 +64,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg7.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg07.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -74,7 +74,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg8.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg08.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -84,7 +84,7 @@
 
 <wallpaper deleted="false">
     <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg9.jpg</filename>
+    <filename>/usr/share/backgrounds/hamonikr/bg09.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
@@ -95,26 +95,6 @@
 <wallpaper deleted="false">
     <name>HamoniKR</name>
     <filename>/usr/share/backgrounds/hamonikr/bg10.jpg</filename>
-    <options>zoom</options>
-    <shade_type>solid</shade_type>
-    <pcolor>#000000</pcolor>
-    <scolor>#000000</scolor>
-    <artist>HamoniKR Team</artist>
-</wallpaper>
-
-<wallpaper deleted="false">
-    <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg11.jpg</filename>
-    <options>zoom</options>
-    <shade_type>solid</shade_type>
-    <pcolor>#000000</pcolor>
-    <scolor>#000000</scolor>
-    <artist>HamoniKR Team</artist>
-</wallpaper>
-
-<wallpaper deleted="false">
-    <name>HamoniKR</name>
-    <filename>/usr/share/backgrounds/hamonikr/bg12.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
